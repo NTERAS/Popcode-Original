@@ -358,3 +358,101 @@ body {
   width:100vw;
   background-image: url('images/wall-cover.png');
 }
+
+.circle1{
+  position: absolute;
+left: 33.44%;
+right: 61.77%;
+top: 11.94%;
+bottom: 79.54%;
+animation: moveCircle 1.5s linear 0s infinite;
+}
+
+.circle2{
+  position: absolute;
+  left: 35.89%;
+  right: 59.22%;
+  top: 16.3%;
+  bottom: 75%;
+  animation: rotateCircle 20s linear 0s infinite;
+}
+
+.circle3{
+  position: absolute;
+left: 34.53%;
+right: 61.56%;
+top: 20.09%;
+bottom: 72.96%;
+animation: upDownCircle 2s linear 0s infinite alternate;
+}
+
+.circle4{
+  position: absolute;
+  left: 37.34%;
+  right: 58.75%;
+  top: 12.22%;
+  bottom: 80.83%;
+  animation: upDownCircle 2s linear 0s infinite alternate;
+}
+
+.circleA{
+  Width: 300px;
+Height: 300px;
+  position: absolute;
+  left: 38.02%;
+  right: 39.74%;
+  top: 8.61%;
+  bottom: 51.85%;
+}
+
+.circle5{
+  position: absolute;
+left: 59.32%;
+right: 35.94%;
+top: 34.26%;
+bottom: 57.41%;
+  animation: upDownCircle 2s linear 0s infinite alternate;
+}
+
+.circle6{
+  position: absolute;
+  left: 55.99%;
+  right: 40.1%;
+  top: 37.69%;
+  bottom: 55.37%;
+  animation: upDownCircle 2s linear 0s infinite alternate;
+}
+
+.circle7{
+  position: absolute;
+left: 57.45%;
+right: 37.66%;
+top: 38.7%;
+bottom: 52.69%;
+  animation: upDownCircle 2s linear 0s infinite alternate;
+}
+.circle8{
+  position: absolute;
+  left: 57.34%;
+  right: 38.75%;
+  top: 43.06%;
+  bottom: 50%;
+  animation: upDownCircle 2s linear 0s infinite alternate;
+}
+
+
+
+@keyframes moveCircle {
+  /* */
+  50% {transform: matrix(0.99, 0.1, 0.17, 0.99, 0, 0);}
+  /* 100%{top: 16%;} */
+}
+
+@keyframes rotateCircle {
+  50% {transform: rotate(360deg);}
+}
+
+@keyframes upDownCircle {
+  0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
