@@ -385,6 +385,13 @@ top: 20.09%;
 bottom: 72.96%;
 animation: upDownCircle 2s linear 0s infinite alternate;
 }
+.glow-ball{
+  position: absolute;
+left: 57.02%;
+right: 40.84%;
+top: 10.2%;
+bottom: 86%;
+}
 
 .circle4{
   position: absolute;
@@ -396,8 +403,8 @@ animation: upDownCircle 2s linear 0s infinite alternate;
 }
 
 .circleA{
-  Width: 300px;
-Height: 300px;
+  Width: 240px;
+Height: 240px;
   position: absolute;
   left: 38.02%;
   right: 39.74%;
