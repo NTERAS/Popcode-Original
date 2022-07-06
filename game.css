@@ -61,3 +61,135 @@ letter-spacing: 0.02em;
 
 color: #FFFFFF;
 }
+
+.x{
+  position: absolute;
+width: 72px;
+height: 17px;
+
+
+font-family: "gothammedium";
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+color: rgba(255, 255, 255, 0.3);
+/* line-height: 17px;
+text-align: center;
+letter-spacing: 16px; */
+
+/* color: #0AEFF7; */
+}
+.x1{
+  left: 35px;
+  top: 15px;
+}
+
+.x2{
+  left: 51px;
+top: 15px;
+}
+
+.x3{
+  left: 67px;
+top: 15px;
+}
+
+.logo-game{
+  position: absolute;
+height: 80px;
+left: 997px;
+top: 6px;
+}
+
+.minus-zoom{
+  position: absolute;
+width: 8px;
+height: 11px;
+left: 23px;
+top: 526px;
+
+font-family: "gothammedium";
+font-style: normal;
+font-weight: 500;
+font-size: 8px;
+line-height: 11px;
+text-align: center;
+letter-spacing: 16px;
+
+color: #FFFFFF;
+}
+
+.plus-zoom{
+  position: absolute;
+width: 8px;
+height: 11px;
+left: 23px;
+top: 451px;
+
+font-family: "gothammedium";
+font-style: normal;
+font-weight: 500;
+font-size: 8px;
+line-height: 11px;
+text-align: center;
+letter-spacing: 16px;
+
+color: #FFFFFF;
+}
+
+.zoom-meter{
+  position: absolute;
+  border-left: 1px solid;
+  height: 62px;
+left: 25px;
+top: 465px;
+border-color: rgba(217, 217, 217, 1);
+}
+
+.zoom-zoom{
+  position: absolute;
+width: 39px;
+height: 7px;
+left: 6px;
+top: 439px;
+
+font-family: "gothammedium";
+font-style: normal;
+font-weight: 500;
+font-size: 5px;
+line-height: 8px;
+text-align: center;
+
+color: #0AEFF7;
+
+transform: rotate(-90deg);
+}
+
+.results{
+  border: 1px solid #FFFFFF;
+  position: absolute;
+width: 97px;
+height: 16px;
+left: 48px;
+top: 518px;
+text-decoration: none;
+
+font-family: "gothammedium";
+font-style: normal;
+font-weight: 500;
+font-size: 4px;
+line-height: 8px;
+/* identical to box height */
+
+text-align: center;
+justify-content: center;
+letter-spacing: 2px;
+text-transform: uppercase;
+
+color: #FFFFFF;
+}
+.results::before{
+  content: url("images/icon-search-9x9.png");
+  width: 5px;
+  height: 5px;
+}
