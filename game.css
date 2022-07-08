@@ -23,55 +23,57 @@ body {
 }
 .score-kar {
   position: absolute;
-  left: 9px;
-  top: 17px;
-
-  font-family: "gothammedium";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 5px;
-  line-height: 8px;
-  /* identical to box height */
-
-  text-align: center;
-  letter-spacing: 1px;
-  border-bottom: 1px solid;
-  border-color: #d9d9d9;
-  padding-bottom: 2px;
-
-  /* BLEU */
-
-  color: #0aeff7;
-
-  transform: rotate(-90deg);
-}
-
-.scoreboard{
-    position: absolute;
-    left: 34px;
-top: 6px;
+width: 37px;
+height: 8px;
+left: 34px;
+top: 38px;
 
 font-family: "gothammedium";
 font-style: normal;
 font-weight: 500;
-font-size: 11px;
-line-height: 17px;
-text-align: center;
-letter-spacing: 0.02em;
+font-size: 8px;
+line-height: 8px;
+/* identical to box height */
 
-color: #FFFFFF;
+text-align: center;
+letter-spacing: 2px;
+
+/* BLEU */
+
+color: #0AEFF7;
+
+transform: rotate(-90deg);
+}
+
+.scoreboard{
+  position: absolute;
+  width: 71px;
+  height: 17px;
+  left: 61px;
+  top: 20px;
+  
+  font-family: "gothammedium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  
+  color: #FFFFFF;
 }
 
 .x{
   position: absolute;
 width: 72px;
 height: 17px;
+top: 37px;
 
 
 font-family: "gothammedium";
 font-style: normal;
 font-weight: 500;
-font-size: 12px;
+font-size: 18px;
 color: rgba(255, 255, 255, 0.3);
 /* line-height: 17px;
 text-align: center;
@@ -80,69 +82,71 @@ letter-spacing: 16px; */
 /* color: #0AEFF7; */
 }
 .x1{
-  left: 35px;
-  top: 15px;
+  left: 64px;
+  
 }
 
 .x2{
-  left: 51px;
-top: 15px;
+  left: 87px;
+
 }
 
 .x3{
-  left: 67px;
-top: 15px;
+  left: 113px;
+
 }
 
 .logo-game{
   position: absolute;
-height: 80px;
-left: 997px;
-top: 6px;
+height: 150px;
+left: 1738px;
+top: 22px;
 }
 
 .minus-zoom{
   position: absolute;
-width: 8px;
-height: 11px;
-left: 23px;
-top: 526px;
+  width: 8px;
+  height: 11px;
+  left: 40px;
+  top: 937px;
+  /* -100px */
+  
+  font-family: "gothammedium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 11px;
+  text-align: center;
+  letter-spacing: 16px;
+  
+  color: #FFFFFF;
 
-font-family: "gothammedium";
-font-style: normal;
-font-weight: 500;
-font-size: 8px;
-line-height: 11px;
-text-align: center;
-letter-spacing: 16px;
-
-color: #FFFFFF;
 }
 
 .plus-zoom{
   position: absolute;
-width: 8px;
-height: 11px;
-left: 23px;
-top: 451px;
-
-font-family: "gothammedium";
-font-style: normal;
-font-weight: 500;
-font-size: 8px;
-line-height: 11px;
-text-align: center;
-letter-spacing: 16px;
-
-color: #FFFFFF;
+  width: 8px;
+  height: 11px;
+  left: 40px;
+  top: 794px;
+  
+  font-family: "gothammedium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 11px;
+  text-align: center;
+  letter-spacing: 16px;
+  
+  color: #FFFFFF;
 }
 
 .zoom-meter{
   position: absolute;
   border-left: 1px solid;
-  height: 62px;
-left: 25px;
-top: 465px;
+  height: 124px;
+left: 42px;
+top: 813px;
 border-color: rgba(217, 217, 217, 1);
 }
 
@@ -150,15 +154,17 @@ border-color: rgba(217, 217, 217, 1);
   position: absolute;
 width: 39px;
 height: 7px;
-left: 6px;
-top: 439px;
+left: 25px;
+top: 770px;
 
 font-family: "gothammedium";
 font-style: normal;
 font-weight: 500;
-font-size: 5px;
+font-size: 8px;
 line-height: 8px;
 text-align: center;
+
+/* BLEU */
 
 color: #0AEFF7;
 
@@ -168,18 +174,18 @@ transform: rotate(-90deg);
 .results{
   border: 1px solid #FFFFFF;
   position: absolute;
-width: 97px;
+width: 140px;
 height: 16px;
-left: 48px;
-top: 518px;
+left: 118px;
+top: 910px;
 text-decoration: none;
 
 font-family: "gothammedium";
 font-style: normal;
 font-weight: 500;
-font-size: 4px;
+font-size: 8px;
 line-height: 8px;
-/* identical to box height */
+cursor: pointer;
 
 text-align: center;
 justify-content: center;
@@ -188,8 +194,91 @@ text-transform: uppercase;
 
 color: #FFFFFF;
 }
+
 .results::before{
   content: url("images/icon-search-9x9.png");
   width: 5px;
   height: 5px;
+}
+
+#overlay-kar{
+  position: absolute;
+  width:100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.623);
+  transform: scale(0);
+}
+
+#input-field{
+  width: 526px;
+  position: absolute;
+  top:501px;
+  left:697px;
+  font-size: 80px;
+  line-height: 77px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: white;
+}
+#input-field:focus{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.425);
+}
+.lezanda{
+  font-family: "gothammedium";
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 12px;
+text-align: center;
+letter-spacing: 5px;
+color: #FFFFFF;
+}
+
+#u-win{
+  position: absolute;
+  width:100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.623);
+  transform: scale(0);
+}
+
+.gtext{
+  font-family: "gothammedium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 12px;
+  text-align: center;
+  letter-spacing: 5px;
+  color: #FFFFFF;
+}
+
+.wc{
+  position: absolute;
+  top:300px;
+  left:410px;
+  font-size: 20px;
+}
+
+.vt{
+  position: absolute;
+  top:340px;
+  left:445px;
+}
+
+.tt{
+  position: absolute;
+  top:372px;
+  left: 493px;
+}
+
+#trouves{
+  position: absolute;
+  width:100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.623);
+  transform: scale(0);
 }
