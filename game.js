@@ -95,18 +95,12 @@ function checkLang(toto){
   cosmos = false;
   for(var i=0; i<codeLang.length; i++) {
       if(toto === codeLang[i]) {
-        console.log(toto);
-        console.log(codeLang[i]+" before unshift");
-        console.log(codeLangCorrect[i]+" before unshift");
+        y =0;
         codeLangCorrect.unshift(codeLang[i]);
-        console.log(codeLang[i]+" after unshift");
         // document.getElementById("id-tt").innerHTML = toto;
-        console.log(i);
-        console.log(codeLang[i],1);
-        // console.log(codeLang.splice(codeLang[i],1));
-        console.log(codeLang);
-        codeLang.splice(codeLang[i],1);
-        console.log(codeLang[i]+"after splice");
+
+        codeLang.splice(i,1);
+       
         checkOverlays("win");
         document.getElementById("u-win").classList.add("anim");
         console.log(codeLang);
