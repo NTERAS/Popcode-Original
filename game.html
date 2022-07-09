@@ -23,6 +23,7 @@
   <body>
     <!-- <img class="game-image" src="images/Jeu-figma.jpg" alt=""> -->
     <div class="jail">
+      <div id="wrong" class="d-flex align-items-center justify-content-center vh-100 vw-100">x</div>
       <div id="overlay-kar">
         <input id="input-field" type="text" autofocus />
         <div
@@ -31,13 +32,7 @@
           TAPE UN NOM DE LANGAGE DE PROGRAMMATION
         </div>
       </div>
-      <div id="u-win">
-        <span class="gtext wc">wow! correct!</span>
-        <div>
-          <span class="gtext vt">vous trouvez:</span>
-          <span id="id-tt" class="gtext tt">test</span>
-        </div>
-      </div>
+      <div id="u-win" class="d-flex justify-content-center align-items-center vh-100 vw-100">correct!</div>
       <div id="trouves">
         <div>
           <div>
@@ -54,16 +49,26 @@
         <span>LANGAGES TROUVés</span>
         <div class="add-a-links"></div>
       </div>
+      <div id="dj-trou" class="d-flex justify-content-center align-items-center vh-100 vw-100">deja trouve</div>
+      <div id="game-over" class="d-flex flex-column justify-content-center align-items-center vh-100 vw-100">
+        <img src="images/game over empty.png" alt="">
+        <img class="game-from-gameover" src="images/game.png" alt="">
+        <img class="over-from-gameover" src="images/over.png" alt="">
+        <!-- <div class="game-from-gameover">game</div>
+        <div class="over-from-gameover">over</div> -->
+        <div>score totale</div>
+      </div>
       <img class="zoom" src="images/Jeu-vide.jpg" alt="" />
       <div>
+        
         <div>
           <div class="score-kar">SCORE</div>
           <div>
             <div class="scoreboard"><span>00</span> /30</div>
             <div>
-              <span class="x x1">x</span>
-              <span class="x x2">x</span>
-              <span class="x x3">x</span>
+              <span id="id-x1" class="x x1">x</span>
+              <span id="id-x2" class="x x2">x</span>
+              <span id="id-x3" class="x x3">x</span>
             </div>
           </div>
         </div>

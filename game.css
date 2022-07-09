@@ -177,7 +177,7 @@ transform: rotate(-90deg);
 width: 140px;
 height: 16px;
 left: 118px;
-top: 910px;
+top: 95%;
 text-decoration: none;
 
 font-family: "gothammedium";
@@ -237,12 +237,36 @@ letter-spacing: 5px;
 color: #FFFFFF;
 }
 
-#u-win{
+/* #u-win{
   position: absolute;
   width:100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.623);
   transform: scale(0);
+} */
+#u-win{
+  position: absolute;
+  width:100vw;
+  height: 100vh;
+  font-family: "gothammedium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 100px;
+  color: #FFFFFF;
+  transform: scale(0);
+}
+
+#u-win.anim{
+  animation: 1s fadeOut forwards;
+}
+
+@keyframes fadeOut1 {
+  0%{ opacity: 100%;
+    transform: scale(1);
+  }
+  99%{transform: scale(1);}
+  100%{ opacity: 0%;
+    transform: scale(0);}
 }
 
 .gtext{
@@ -281,4 +305,89 @@ color: #FFFFFF;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.623);
   transform: scale(0);
+}
+.my-zoom-index{
+  position: absolute;
+  top: -30%;
+}
+
+#wrong{
+  position: absolute;
+  font-family: "gothammedium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 600px;
+  color: #FFFFFF;
+  transform: scale(0);
+  
+}
+#wrong.animation{
+  animation: makeError 1s forwards;
+}
+
+@keyframes makeError {
+  0%{
+    opacity: 100%;
+    transform: scale(1);
+  }
+  25%{
+    opacity: 0%;
+    transform: scale(1);
+  }
+  26%{
+    opacity: 100%;
+    transform: scale(1);
+  }
+  99%{
+    transform: scale(1);
+  }
+  100%{
+    opacity: 0%;
+    transform: scale(0);
+  }
+}
+
+#dj-trou{
+  position: absolute;
+  width:100vw;
+  height: 100vh;
+  font-family: "gothammedium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 100px;
+  color: #FFFFFF;
+  transform: scale(0);
+}
+
+#dj-trou.anim{
+  animation: 1s fadeOut forwards;
+}
+
+@keyframes fadeOut {
+  0%{ opacity: 100%;
+    transform: scale(1);
+  }
+  99%{transform: scale(1);}
+  100%{ opacity: 0%;
+    transform: scale(0);}
+}
+
+#game-over{
+  position: absolute;
+  width:100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  transform: scale(0);
+}
+
+.game-from-gameover{
+  position: relative;
+left: -54px;
+top: -281px;
+}
+
+.over-from-gameover{
+  position: relative;
+left: 46px;
+top: -295px;
 }
