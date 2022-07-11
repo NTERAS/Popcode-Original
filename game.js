@@ -1,47 +1,32 @@
 
-
 document.onkeydown = function(evt) {
   document.getElementById("u-win").classList.remove("anim");
   document.getElementById("wrong").classList.remove("animation");
   document.getElementById("dj-trou").classList.remove("anim");
+  document.getElementById("trouves").style.transform = "scale(0)";
   
-  
-
   evt = evt || window.event;
   var charCode = evt.key || evt.which;
 
-  // switch (charCode) {
-  //   case 0:
-  //     text = "Off";
-  //     break;
-  //   case 1:
-  //     text = "On";
-  //     break;
-  //   default:
-  //     text = "No value found";
-  // } 
-
   if(charCode === "Enter" && document.getElementById("input-field").value != ""){
-    console.log("inside correct enter")
+    // console.log("inside correct enter")
     myText = document.getElementById("input-field").value;
     // checkOverlays("esc");
+    // console.log(myText);
   
     fixErrors(myText);
     myText = document.getElementById("input-field").value;
   
     x = checkDoubles(myText);
     if(x==false){
-      console.log("x == false")
+      // console.log("x == false")
       checkLang(myText);
     }else{
       document.getElementById("dj-trou").classList.add("anim");
       checkOverlays("esc");
     }
   }
-  // if(charCode === "Enter" && document.getElementById("input-field").value == ""){
-  //   console.log("nothing happens")
-  //   checkOverlays("esc");
-  // }
+
   if(charCode === "Escape") {
     checkOverlays("esc");
   }
@@ -53,17 +38,20 @@ document.onkeydown = function(evt) {
 let codeLang = ["javascript", "html","css","sql","python","java","bash","powershell","c#","php","c++","typescript","c","ruby","go","assembly","swift","kotlin","r","vba","objective-c","scala","rust","dart","elixir","clojure","webassembly","karolos"] //28
 let codeLangCorrect = [];
 let count = 0;
+let points = 0;
+// console.log(count);
 
-console.log(codeLang);
-  console.log(codeLangCorrect);
+// console.log(codeLang);
+//   console.log(codeLangCorrect);
 
-function fixErrors(olo){
-  olo.toLowerCase;
+function fixErrors(olop){
+ let olo = olop.toLowerCase();
+  console.log(olo);
   if(olo == "js"){ 
     olo = "javascript"; 
-    console.log("javascript inside if in fixerrors");
+    
     document.getElementById("input-field").value = olo;
-    console.log(olo+" olo in the finish of fixerrors")
+    
   }
   if(olo == "power shell"){ 
     olo = "powershell";
@@ -99,10 +87,18 @@ function checkLang(toto){
         codeLangCorrect.unshift(codeLang[i]);
         // document.getElementById("id-tt").innerHTML = toto;
 
-        codeLang.splice(i,1);
+        
        
         checkOverlays("win");
         document.getElementById("u-win").classList.add("anim");
+        if(codeLang[i] == "karolos"){
+          points = points +2;
+          console.log("YES!")
+        }
+        points = points +1;
+        f = pad(points);
+        document.getElementById("points").innerHTML = f;
+        codeLang.splice(i,1);
         console.log(codeLang);
         console.log(codeLangCorrect);
         cosmos = true;
@@ -177,7 +173,21 @@ function countErrors(count){
   return count;
 
 }
+
+function pad(num) {
+  let numnum = num;
+  num = num.toString();
+  if (numnum < 10){
+    num = "0" + num;
+  } 
+  return num;
+}
 // ----------------------BUTTONS-------------------------------
 document.getElementById("id-results").addEventListener("click", ()=>{
-  document.getElementById("trouves").style.transform = "scale(1)";
+  checkOverlays("trou");
 });
+document.getElementById("close-img").addEventListener("click", ()=>{
+  checkOverlays("esc");
+});
+
+

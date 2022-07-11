@@ -203,6 +203,11 @@ color: #FFFFFF;
 
 #overlay-kar{
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
   width:100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.623);
@@ -210,10 +215,10 @@ color: #FFFFFF;
 }
 
 #input-field{
-  width: 526px;
-  position: absolute;
-  top:501px;
-  left:697px;
+  /* width: 526px; */
+  /* position: absolute; */
+  /* top:501px; */
+  /* left:697px; */
   font-size: 80px;
   line-height: 77px;
   text-align: center;
@@ -301,14 +306,62 @@ color: #FFFFFF;
 
 #trouves{
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width:100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.623);
   transform: scale(0);
+  color: white;
 }
+.trouv-title{
+  /* position: absolute;
+  width: 526px;
+  height: 77px;
+  left: 90px;
+  top: 247px; */
+  
+  font-family: "gothammedium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 80px;
+  line-height: 77px;
+
+  text-align: center;
+  letter-spacing: 0.02em;
+  
+  color: #FFFFFF;
+}
+.obj-bg{
+  width: 434px;
+  height:434px;
+}
+.obj-p{
+  max-width: 765px;
+  height: 434px;
+  overflow-y: hidden;
+  /* position: absolute;
+width: 642px;
+height: 457px; */
+/* left: 567px;
+top: 368px; */
+
+ont-family: "gothammedium";
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 20px;
+
+color: #FFFFFF;
+}
+#close-img{
+  cursor: pointer;
+}
+
 .my-zoom-index{
   position: absolute;
-  top: -30%;
+  top: -5%;
 }
 
 #wrong{
