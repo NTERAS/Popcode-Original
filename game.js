@@ -76,19 +76,24 @@ function fixErrors(olop){
     olo = "webassembly";
     document.getElementById("input-field").value = olo;
   }
-  
 }
 
 function checkLang(toto){
   cosmos = false;
   for(var i=0; i<codeLang.length; i++) {
       if(toto === codeLang[i]) {
-        y =0;
+        // y =0;
         codeLangCorrect.unshift(codeLang[i]);
-        // document.getElementById("id-tt").innerHTML = toto;
+        y = codeLangCorrect.length-1;
+        console.log(y);
+        if(y <= 13){
+          document.getElementById("lan-trou-list1").innerHTML += "<br>"+"<button class=btn-style-off id= id-code"+y+">"+codeLang[i]+"</button>";
+        }else{
+          document.getElementById("lan-trou-list2").innerHTML += "<br>"+"<button class=btn-style-off id= id-code"+y+">"+codeLang[i]+"</button>";
+        }
+        
 
         
-       
         checkOverlays("win");
         document.getElementById("u-win").classList.add("anim");
         if(codeLang[i] == "karolos"){

@@ -347,7 +347,7 @@ height: 457px; */
 /* left: 567px;
 top: 368px; */
 
-ont-family: "gothammedium";
+font-family: "gothammedium";
 font-style: normal;
 font-weight: 500;
 font-size: 13px;
@@ -355,8 +355,27 @@ line-height: 20px;
 
 color: #FFFFFF;
 }
+
+.btn-style-off{
+  text-decoration: none;
+  background-color: transparent;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-top: none;
+  border-bottom: none;
+  color: white;
+  cursor: pointer;
+  width: 100px;
+  font-family: "gothammedium";
+  font-size: 11px;
+}
+
 #close-img{
   cursor: pointer;
+}
+
+.kar-list-wrap{
+  overflow-wrap: normal;
 }
 
 .my-zoom-index{
