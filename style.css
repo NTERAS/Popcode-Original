@@ -375,6 +375,9 @@ body {
 }
 
 .rules-kar {
+  position: absolute;
+  top: 95%;
+  right: 269px;
   font-family: "Courier New", Courier, monospace;
   font-style: normal;
   text-decoration: none;
@@ -407,14 +410,17 @@ body {
 /* END OF OLD ANIMATION */
 
 .main-logo {
-  max-height: 250px;
+  /* max-height: 250px;*/
+  max-height: 447px;
+  top: 93px;
 }
 
 .trente {
+  /* width: 100px; */
   font-family: "gothammedium";
   font-style: normal;
   font-weight: 500;
-  font-size: 90px;
+  font-size: 150px;
   line-height: 30px;
 
   text-align: center;
@@ -430,7 +436,7 @@ body {
   font-family: "gothammedium";
   font-style: normal;
   font-weight: 500;
-  font-size: 9px;
+  font-size: 15px;
   line-height: 18px;
   /* or 200% */
 
@@ -445,7 +451,7 @@ body {
   font-family: "gothammedium";
   font-style: normal;
   font-weight: 500;
-  font-size: 7px;
+  font-size: 13px;
   line-height: 12px;
   text-align: center;
   letter-spacing: 5px;
@@ -473,13 +479,26 @@ body {
   }
 }
 
+#continue-save{
+  font-family: "gothammedium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 12px;
+  text-align: center;
+  letter-spacing: 5px;
+  text-decoration: none;
+  color: #0aeff7;
+  animation: 4s pop-out ease infinite;
+}
+
 .rules-alain {
   position: absolute;
   top: 95%;
   font-family: "gothammedium";
   font-style: normal;
   font-weight: 500;
-  font-size: 6px;
+  font-size: 12px;
   line-height: 11px;
   text-align: center;
   letter-spacing: 0.02em;
@@ -487,15 +506,17 @@ body {
   color: #ffffff;
 }
 #m-l {
-  right: 194px;
+  right: 275px;
 }
+
 #p-c {
   right: 89px;
 }
 
 .linear-wipe {
-  width: 113px;
-  height: 79px;
+  padding-top: 41px!important;
+  width: 191px;
+  height: 150px;
   background: linear-gradient(
     to right,
     #ffaaff 20%,

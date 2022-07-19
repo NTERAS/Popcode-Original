@@ -23,16 +23,14 @@ const langObj = '{"langArray":[' +
 '{"language":"vba","img":"images/langs-code/VBA 434.png","text":"Visual Basic for Applications (VBA) est une implémentation de Microsoft Visual Basic qui est intégrée dans toutes les applications de Microsoft Office, dans quelques autres applications Microsoft comme Visio et au moins partiellement dans quelques autres applications comme AutoCAD, WordPerfect, MicroStation, Solidworks ou encore ArcGIS. Il remplace et étend les capacités des langages macro spécifiques aux plus anciennes applications comme le langage WordBasic intégré à une ancienne version du logiciel Word, et peut être utilisé pour contrôler la quasi-totalité de l’IHM des applications hôtes, ce qui inclut la possibilité de manipuler les fonctionnalités de l’interface utilisateur comme les menus, et de personnaliser les boîtes de dialogue et les formulaires utilisateurs.Comme son nom l’indique, VBA est très lié à Visual Basic (les syntaxes et concepts des deux langages se ressemblent), mais ne peut normalement qu’exécuter du code dans une application hôte Microsoft Office (et non pas d’une application autonome, il requiert donc une licence de la suite bureautique Microsoft). Il peut cependant être utilisé pour contrôler une application à partir d’une autre (par exemple, créer automatiquement un document Word à partir de données Excel). Le code ainsi exécuté est stocké dans des instances de documents, on l’appelle également macro.VBA est fonctionnellement riche et extrêmement flexible, mais il possède d’importantes limitations, comme son support limité des fonctions de rappel (callbacks), ainsi qu’une gestion des erreurs archaïque, utilisation de handlers d’erreurs en lieu et place d’un mécanisme d’exceptions.Même si ces limitations rendent ce langage très peu utilisé par les développeurs informaticiens soucieux d’utiliser des outils avant tout performants, sa simplicité et sa facilité d’accès ont séduit certaines professions, notamment dans la finance." },' +
 '{"language":"objective-c","img":"images/langs-code/objective-c 434.png","text":"Objective-C est un langage de programmation orienté objet réflexif. C’est une extension du C ANSI, comme le C++, mais qui se distingue de ce dernier par sa distribution dynamique des messages, son typage faible ou fort, son typage dynamique et son chargement dynamique. Contrairement au C++, il ne permet pas l’héritage multiple mais il existe toutefois des moyens de combiner les avantages de C++ et d’Objective-C.Aujourd’hui, il est principalement utilisé dans les systèmes d’exploitation d’Apple : macOS et son dérivé iOS, basés sur la bibliothèque de classes Cocoa mais il existe aussi une bibliothèque de classes libre GNUstep sous GNU/Linux. Cocoa et GNUstep sont les successeurs de l’API OpenStep, utilisée dans les systèmes d’exploitation NeXTSTEP (à l’origine de macOS) et son pendant libre OPENSTEP." },' +
 '{"language":"scala","img":"images/langs-code/scala.png","text":"Scala est un langage de programmation multi-paradigme conçu à l’École polytechnique fédérale de Lausanne (EPFL) pour exprimer les modèles de programmation courants dans une forme concise et élégante. Son nom vient de l’anglais Scalable language qui signifie à peu près « langage adaptable » ou « langage qui peut être mis à l’échelle ». Il peut en effet être vu comme un métalangage.Scala intègre les paradigmes de programmation orientée objet et de programmation fonctionnelle, avec un typage statique. Il concilie ainsi ces deux paradigmes habituellement opposés (à de rares exceptions près, telle que le langage OCaml) et offre au développeur la possibilité de choisir le paradigme le plus approprié à son problème.Il est prévu pour être compilé en bytecode Java (exécutable sur la JVM), ou .NET. Seule la plateforme Java est supportée officiellement par l’EPFL.Si on souhaite l’utiliser exclusivement avec la JVM, il est alors possible d’utiliser les bibliothèques écrites en Java de façon complètement transparente. Ainsi, Scala bénéficie de la maturité et de la diversité des bibliothèques qui ont fait la force de Java depuis une dizaine d’années. De plus, il est possible d’invoquer du code écrit en Scala à partir de programmes écrits en Java ce qui facilite la transition de Java à Scala.Les développeurs habitués à un seul paradigme (par exemple ceux ayant utilisé principalement Java qui, lui, repose sur la programmation orientée objet) peuvent trouver ce langage déroutant et difficile car il nécessite l’apprentissage de concepts différents si on veut pouvoir exploiter tout son potentiel. Néanmoins, il est tout à fait possible de l’utiliser dans un premier temps comme remplaçant de Java, en profitant alors de sa syntaxe épurée, puis d’utiliser les différents « nouveaux » concepts au fur et à mesure de leur apprentissage." },' +
-'{"language":"rust","img":"images/langs-code/rust.png","text":"" },' +
-'{"language":"dart","img":"images/langs-code/CSS 307x434.png","text":"https://picsum.photos/200" },' +
-'{"language":"elixir","img":"images/langs-code/CSS 307x434.png","text":"https://picsum.photos/200" },' +
-'{"language":"clojure","img":"images/langs-code/CSS 307x434.png","text":"https://picsum.photos/200" },' +
-'{"language":"webassembly","img":"images/langs-code/CSS 307x434.png","text":"https://picsum.photos/200" }]}';
+'{"language":"rust","img":"images/langs-code/rust.png","text":"Rust est un langage de programmation compilé multi-paradigme conçu et développé par Mozilla Research depuis 2010. Il a été conçu pour être « un langage fiable, concurrent, pratique » supportant les styles de programmation purement fonctionnel, modèle d’acteur, procédural, ainsi qu’orienté objet sous certains aspects.En 2020, ses domaines de prédilection sont la programmation système, les applications en ligne de commande, les applications Web via WebAssembly, les services réseaux et les systèmes embarqués.Du fait de la politique de Mozilla, Rust est entièrement développé de façon ouverte (les ingénieurs de Mozilla Research publient leurs idées et les décisions prises lors des réunions) et sollicite les remarques et contributions de la communauté. La conception du langage est graduellement améliorée au travers des retours de l’équipe travaillant sur le moteur de rendu Servo et de façon pragmatique lors de l’écriture du compilateur. Bien que le projet soit financé par Mozilla, la majorité des contributions proviennent de la communauté." },' +
+'{"language":"dart","img":"images/langs-code/dart.png","text":"Dart est un langage de programmation optimisé pour les applications sur plusieurs plateformes. Il est développé par Google et est utilisé pour créer des applications mobiles, de bureau, de serveur et web.Dart est un langage orienté objet à ramasse-miettes avec une syntaxe de type C++. Dart peut se compiler en code natif ou en JavaScript. Il prend en charge les interfaces, les mixins,les classes abstraites, les génériques réifiés et l’inférence de type." },' +
+'{"language":"elixir","img":"images/langs-code/elixir.png","text":"Elixir est un langage de programmation multi-paradigme fonctionnant sur la machine virtuelle Erlang (BEAM). Il est créé en 2011 par le développeur José Valim, personnalité du monde Ruby et l’un des premiers contributeurs au framework de programmation Ruby on Rails. Il intègre les paradigmes de programmation fonctionnelle, programmation concurrente et programmation orientée processus (en), et supporte la métaprogrammation via un système de macros et le polymorphisme via un système dit de protocoles." },' +
+'{"language":"clojure","img":"images/langs-code/clojure.png","text":"Clojure est un langage de programmation fonctionnel compilé, multi-plateforme et destiné à la création de programmes sûrs et facilement distribuables. C’est un dialecte de Lisp. Il transpile vers du bytecode Java, du code JavaScript et du bytecode .NET. Clojure est donc disponible sur la JVM, le CLR, les navigateurs et Node.js." },' +
+'{"language":"webassembly","img":"images/langs-code/webassembly.png","text":"WebAssembly, abrégé wasm, est un standard du World Wide Web pour le développement d’applications. Il est conçu pour compléter JavaScript avec des performances supérieures. Le standard consiste en un bytecode, sa représentation textuelle et un environnement d’exécution dans un bac à sable compatible avec JavaScript. Il peut être exécuté dans un navigateur Web et en dehors. WebAssembly est standardisé dans le cadre du World Wide Web Consortium.Comme WebAssembly ne spécifie qu’un langage de bas niveau, le bytecode est généralement produit en compilant un langage de plus haut niveau. Parmi les premiers langages supportés figurent Rust avec le projet/module (crate) wasm-bindgen ainsi que le C et C++, compilés avec Emscripten (basé sur LLVM). De nombreux autres langages de programmation possèdent aujourd’hui un compilateur WebAssembly, parmi lesquels : C#, Go, Java, Lua, Python ou Ruby.Les navigateurs Web compilent le bytecode wasm dans le langage machine de l’hôte sur lequel ils sont utilisés avant de l’exécuter." }]}';
 const obj = JSON.parse(langObj);
 
-// async function(){
 
-// }
 
 console.log(obj.langArray);
 document.onkeydown = function(evt) {
@@ -44,17 +42,26 @@ document.onkeydown = function(evt) {
   evt = evt || window.event;
   var charCode = evt.key || evt.which;
 
-console.log(buttons);
+// console.log(buttons);
 
-  if(charCode === "Enter" && document.getElementById("input-field").value != ""){
+ breakit: if(charCode === "Enter" && document.getElementById("input-field").value != ""){
     // console.log("inside correct enter")
     myText = document.getElementById("input-field").value;
-    // console.log(myText);
+    myText = myText.toLowerCase();
+    console.log(myText);
+    if(myText=="karolos"){
+      console.log("secret found");
+      checkOverlays("esc");
+      document.getElementById("input-field").value="";
+      break breakit;
+    }
   
     fixErrors(myText);
+
     myText = document.getElementById("input-field").value;
   
     x = checkDoubles(myText);
+
     if(x==false){
       // console.log("x == false")
       checkLang(myText);
@@ -72,7 +79,7 @@ console.log(buttons);
 }
 };
 
-let codeLang = ["javascript", "html","css","sql","python","java","bash","powershell","c#","php","c++","typescript","c","ruby","go","assembly","swift","kotlin","r","vba","objective-c","scala","rust","dart","elixir","clojure","webassembly","karolos"] //28
+let codeLang = ["javascript", "html","css","sql","python","java","bash","powershell","c#","php","c++","typescript","c","ruby","go","assembly","swift","kotlin","r","vba","objective-c","scala","rust","dart","elixir","clojure","webassembly"] //28
 let codeLangCorrect = [];
 let count = 0;
 let points = 0;
@@ -88,9 +95,7 @@ function fixErrors(olop){
   console.log(olo);
   if(olo == "js"){ 
     olo = "javascript"; 
-    
     document.getElementById("input-field").value = olo;
-    
   }
   if(olo == "power shell"){ 
     olo = "powershell";
@@ -115,17 +120,19 @@ function fixErrors(olop){
     olo = "webassembly";
     document.getElementById("input-field").value = olo;
   }
+  document.getElementById("input-field").value = olo;
 }
 
 function checkLang(toto){
   cosmos = false;
   for(var i=0; i<codeLang.length; i++) {
-      if(toto === codeLang[i]) {
+      if(toto == codeLang[i]) {
         // y =0;
         codeLangCorrect.unshift(codeLang[i]);
+        window.localStorage.setItem("answerKey",JSON.stringify(codeLangCorrect));
         y = codeLangCorrect.length-1;
         console.log(y);
-        if(y <= 13){
+        
           // document.getElementById("lan-trou-list1").innerHTML += "<br>"+"<button class=btn-style-off id= id-code"+y+">"+codeLang[i]+"</button>";
           const para = document.createElement("btn-style-off");
           
@@ -145,6 +152,7 @@ function checkLang(toto){
 
           if(document.getElementById("myCheck").checked == false){
             setTimeout(function(){ document.getElementById("trouves").style.transform = "scale(1)"; }, 1000);
+            autoClose(true);
           }
           
           
@@ -162,23 +170,28 @@ function checkLang(toto){
               }
             }
           };
-          document.getElementById("lan-trou-list1").appendChild(para);
-          document.getElementById("lan-trou-list1").appendChild(para).style = "width: 100px; text-align:center; text-decoration: none; background-color: transparent; border-left: 1px solid white;border-right: 1px solid white; border-top: none; border-bottom: none; color: white; cursor: pointer;  font-family:gothammedium; font-size: 11px;";
+          if(y <= 13){
+            document.getElementById("lan-trou-list1").appendChild(para);
+            document.getElementById("lan-trou-list1").appendChild(para).style = "width: 100px; text-align:center; text-decoration: none; background-color: transparent; border-left: 1px solid white;border-right: 1px solid white; border-top: none; border-bottom: none; color: white; cursor: pointer; font-family:gothammedium; font-size: 11px;";
+          }else{
+            document.getElementById("lan-trou-list2").appendChild(para);
+            document.getElementById("lan-trou-list2").appendChild(para).style = "width: 100px; text-align:center; text-decoration: none; background-color: transparent; border-left: 1px solid white;border-right: 1px solid white; border-top: none; border-bottom: none; color: white; cursor: pointer;  font-family:gothammedium; font-size: 11px;";
+            // document.getElementById("lan-trou-list2").innerHTML += "<br>"+"<button class=btn-style-off id= id-code"+y+">"+codeLang[i]+"</button>";
+          }
+          
           // document.getElementById("lan-trou-list1").appendChild(para).style.display="block";
-
-
-        }else{
-          document.getElementById("lan-trou-list2").innerHTML += "<br>"+"<button class=btn-style-off id= id-code"+y+">"+codeLang[i]+"</button>";
-        }
+        
         
 
         
         checkOverlays("win");
         document.getElementById("u-win").classList.add("anim");
+
         if(codeLang[i] == "karolos"){
           points = points +2;
           console.log("YES!")
         }
+
         points = points +1;
         f = pad(points);
         document.getElementById("points").innerHTML = f;
@@ -190,12 +203,13 @@ function checkLang(toto){
         // return toto;
       }
     }
+
     if(cosmos == false){
-  document.getElementById("wrong").classList.add("animation")
-  
-  count = countErrors(count);
-  if(count>= 3){
-    document.getElementById("game-over").style.transform = "scale(1)";
+      document.getElementById("wrong").classList.add("animation")
+      count = countErrors(count);
+      if(count>= 3){
+        document.getElementById("game-over").style.transform = "scale(1)";
+        updated();
   }
 }
 checkOverlays("esc");
@@ -239,6 +253,7 @@ function checkOverlays(kar){
 
 function countErrors(count){
   count = count+1;
+  window.localStorage.setItem("errorsKey",JSON.stringify(count));
   switch (count) {
     case 1:
       document.getElementById("id-x1").style.color = "#0AEFF7";
@@ -266,6 +281,13 @@ function pad(num) {
   } 
   return num;
 }
+
+function autoClose(kar){
+  if(kar){
+    setTimeout(function(){ document.getElementById("trouves").style.transform = "scale(0)"; }, 3000);
+  }
+}
+
 // ----------------------BUTTONS-------------------------------
 document.getElementById("id-results").addEventListener("click", ()=>{
   checkOverlays("trou");
@@ -287,7 +309,23 @@ document.getElementById("close-img").addEventListener("click", ()=>{
   // }
 // })
 
-function search(){
-  // if(){}
-  // this.inn
+// function search(){
+//   // if(){}
+//   // this.inn
+// }
+// ------------------------------counter-----------------------------
+let counts=setInterval(updated,50);
+let upto=100;
+function updated(){
+  var karcount= document.getElementById("counterOne");
+  karcount.innerHTML=++upto;
+  if(upto===1000)
+  {
+      clearInterval(counts);
+  }
 }
+
+if(count>= 3){
+ 
+}
+

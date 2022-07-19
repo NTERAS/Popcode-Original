@@ -1,7 +1,13 @@
 var myVar;
+var existKey = localStorage.getItem('answerKey');
+console.log(existKey);
+if(existKey==null){
+  document.getElementById("continue-save").style.display="none";
+}
 
 function myFunction() {
 myVar = setTimeout(showPage, 5000);
+
 }
 
 function showPage() {
@@ -92,3 +98,14 @@ const next = () => {
 };
 
 next();
+
+document.querySelector(".start-link").addEventListener("click",()=>{
+  console.log("clear all");
+  window.localStorage.clear();
+})
+
+document.querySelector("#continue-save").addEventListener("click",()=>{
+  arrayKey = JSON.parse(existKey)
+  document.getElementById("points").innerHTML=arrayKey.length;
+  console.log(points)
+})

@@ -83,17 +83,14 @@ letter-spacing: 16px; */
 }
 .x1{
   left: 64px;
-  
 }
 
 .x2{
   left: 87px;
-
 }
 
 .x3{
   left: 113px;
-
 }
 
 .logo-game{
@@ -462,4 +459,65 @@ top: -281px;
   position: relative;
 left: 46px;
 top: -295px;
+}
+#mediaCheck{
+  position: absolute;
+  width:100vw;
+  height: 100vh;
+  background-image: url("images/badsignal.gif");
+  background-size: cover;
+  transform: scale(0);
+  color: white;
+  font-size: 25px;
+}
+
+#myCheck{
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #ffaaff;
+	/* box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05); */
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+}
+/* #myCheck:active, .myCheck:checked:active {
+	box-shadow: 0 1px 2px rgb(241, 6, 6), inset 0px 1px 3px rgb(41, 190, 11);
+} */
+
+#myCheck:checked {
+	background-color: transparent;
+	/* border: 2px solid #3f053f; */
+	/* box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1); */
+	color: #cc0f0f;
+}
+
+#myCheck:checked:after {
+	/* content: '\2714'; */
+  content: "";
+  background-color: #ffaaff;
+	/* font-size: 14px; */
+	position: absolute;
+  width: 10px;
+  height: 10px;
+	top: 5px;
+	left: 4px;
+	color: #ffaaff;
+}
+
+.finalist{
+  font-family: "gothammedium";
+  padding: 5px;
+}
+
+@media only screen and (max-height: 910px) {
+  #mediaCheck{
+    transform: scale(0);
+  }
+}
+
+@media only screen and (max-width: 1889px) {
+  #mediaCheck{
+    transform: scale(0);
+  }
 }
