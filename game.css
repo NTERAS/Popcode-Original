@@ -366,6 +366,19 @@ color: #FFFFFF;
   font-family: "gothammedium";
   font-size: 11px;
 }
+.btn-style-off:hover{
+  text-decoration: none;
+  background-color: white;
+  border-left: 1px solid rgb(22, 170, 207);
+  border-right: 1px solid rgb(199, 88, 140);
+  border-top: none;
+  border-bottom: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  width: 100px;
+  font-family: "gothammedium";
+  font-size: 11px;
+}
 
 #close-img{
   cursor: pointer;
@@ -509,6 +522,11 @@ top: -295px;
   font-family: "gothammedium";
   padding: 5px;
 }
+#secret{
+  font-family: "gothammedium";
+  writing-mode: vertical-rl;
+  /* transform: rotate(90deg); */
+}
 
 @media only screen and (max-height: 910px) {
   #mediaCheck{
@@ -516,8 +534,8 @@ top: -295px;
   }
 }
 
-@media only screen and (max-width: 1889px) {
+@media only screen and (max-width: 1200px) {
   #mediaCheck{
-    transform: scale(0);
+    transform: scale(1);
   }
 }

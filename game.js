@@ -48,9 +48,10 @@ document.onkeydown = function(evt) {
     // console.log("inside correct enter")
     myText = document.getElementById("input-field").value;
     myText = myText.toLowerCase();
-    console.log(myText);
+    // console.log(myText);
     if(myText=="karolos"){
       console.log("secret found");
+      document.getElementById("secret").innerHTML = ":)"
       checkOverlays("esc");
       document.getElementById("input-field").value="";
       break breakit;
@@ -81,8 +82,10 @@ document.onkeydown = function(evt) {
 
 let codeLang = ["javascript", "html","css","sql","python","java","bash","powershell","c#","php","c++","typescript","c","ruby","go","assembly","swift","kotlin","r","vba","objective-c","scala","rust","dart","elixir","clojure","webassembly"] //28
 let codeLangCorrect = [];
+let pointVault = [0,0,0,0,0];
 let count = 0;
 let points = 0;
+let strikePoints = 1;
 
 
 // console.log(count);
@@ -135,6 +138,12 @@ function checkLang(toto){
         
           // document.getElementById("lan-trou-list1").innerHTML += "<br>"+"<button class=btn-style-off id= id-code"+y+">"+codeLang[i]+"</button>";
           const para = document.createElement("btn-style-off");
+          para.onmouseover = function(){
+            this.style = "width: 100px; text-align:center; text-decoration: none; background-color: white; border-left: 1px solid rgb(22, 170, 207);border-right: 1px solid rgb(199, 88, 140); border-top: none; border-bottom: none; color: black; cursor: pointer; font-family:gothammedium; font-size: 11px;";
+          };
+          para.onmouseout = function(){
+            this.style = "width: 100px; text-align:center; text-decoration: none; background-color: transparent; border-left: 1px solid white;border-right: 1px solid white; border-top: none; border-bottom: none; color: white; cursor: pointer; font-family:gothammedium; font-size: 11px;";
+          };
           
           para.innerText = codeLang[i];
 
@@ -187,17 +196,25 @@ function checkLang(toto){
         checkOverlays("win");
         document.getElementById("u-win").classList.add("anim");
 
-        if(codeLang[i] == "karolos"){
-          points = points +2;
-          console.log("YES!")
-        }
+        // if(codeLang[i] == "karolos"){
+        //   points = points +2;
+        //   console.log("YES!")
+        // }
 
         points = points +1;
+        strikePoints *= 2;
         f = pad(points);
         document.getElementById("points").innerHTML = f;
         codeLang.splice(i,1);
         console.log(codeLang);
         console.log(codeLangCorrect);
+
+        pointVault[0] = points;
+        pointVault[1] = strikePoints;
+
+        // console.log(pointVault);
+        // console.log(typeof(pointVault));
+
         cosmos = true;
         break;
         // return toto;
@@ -209,7 +226,8 @@ function checkLang(toto){
       count = countErrors(count);
       if(count>= 3){
         document.getElementById("game-over").style.transform = "scale(1)";
-        updated();
+        startCounter();
+        // updated();
   }
 }
 checkOverlays("esc");
@@ -222,8 +240,14 @@ function checkDoubles(kar){
       return true;
     }
   }
-  console.log("checkdoubles false");
+  // console.log("checkdoubles false");
   return false;
+}
+
+function bigImg() {
+  
+  this.style.color = "black";
+  console.log("mouseover");
 }
 
 function checkOverlays(kar){
@@ -231,22 +255,26 @@ function checkOverlays(kar){
     document.getElementById("overlay-kar").style.transform = "scale(1)";
     document.getElementById("u-win").style.transform = "scale(0)";
     document.getElementById("trouves").style.transform = "scale(0)";
+    hideShit("yes")
   }
   if(kar == "win"){
     document.getElementById("overlay-kar").style.transform = "scale(0)";
     document.getElementById("u-win").style.transform = "scale(1)";
     document.getElementById("trouves").style.transform = "scale(0)";
+    hideShit("yes")
   }
   if(kar == "trou"){
     document.getElementById("overlay-kar").style.transform = "scale(0)";
     document.getElementById("u-win").style.transform = "scale(0)";
     document.getElementById("trouves").style.transform = "scale(1)";
+    hideShit("yes")
   }
   if(kar == "esc"){
     document.getElementById("overlay-kar").style.transform = "scale(0)";
     document.getElementById("u-win").style.transform = "scale(0)";
     document.getElementById("trouves").style.transform = "scale(0)";
     document.getElementById("input-field").value ="";
+    hideShit("no");
     // console.log("checkoverlays == esc");
   }
 }
@@ -257,20 +285,42 @@ function countErrors(count){
   switch (count) {
     case 1:
       document.getElementById("id-x1").style.color = "#0AEFF7";
+      pointVault[2] = pointVault[1];
+      pointVault[1] = 0;
+      strikePoints = 1;
       // 
       break;
     case 2:
       document.getElementById("id-x2").style.color = "#0AEFF7";
+      pointVault[3] = pointVault[1];
+      pointVault[1] = 0;
+      strikePoints = 1;
       break;
     case 3:
       document.getElementById("id-x3").style.color = "#0AEFF7";
+      pointVault[4] = pointVault[1];
+      pointVault[1] = 0;
+      strikePoints = 1;
+      console.log(pointVault);
       break;
     default:
       console.log("default");
   } 
-  console.log(count);
+  // console.log(count);
   return count;
 
+}
+function hideShit(shit){
+  imTired = document.querySelectorAll(".closeThis");
+ 
+  for(var i=0; i< imTired.length; i++){
+    if(shit== "yes"){
+      imTired[i].style = "transform:scale(0)";
+    }else{
+      imTired[i].style = "transform:scale(1)";
+    }
+    
+  }
 }
 
 function pad(num) {
@@ -314,18 +364,59 @@ document.getElementById("close-img").addEventListener("click", ()=>{
 //   // this.inn
 // }
 // ------------------------------counter-----------------------------
-let counts=setInterval(updated,50);
-let upto=100;
-function updated(){
-  var karcount= document.getElementById("counterOne");
-  karcount.innerHTML=++upto;
-  if(upto===1000)
-  {
-      clearInterval(counts);
+// points=5;
+let upto=1;
+let counterPhase = 1;
+let totalStrikes = 0;
+// totalStrikes = totalStrikes+pointVault[4];
+// const sum = [1, 2, 3].reduce((partialSum, a) => partialSum + a, 0);
+
+function startCounter(){
+totalStrikes = pointVault[2]+pointVault[3]+pointVault[4];
+// totalStrikes = totalStrikes+pointVault[4];
+  console.log(pointVault[2]+" [2]");
+  console.log(pointVault[3]+" [3]");
+  console.log(pointVault[4]+" [4]");
+  console.log(totalStrikes+"total strikes");
+  // console.log(totalStrikes+"total strikes");
+  if(counterPhase==1){
+    document.querySelector(".finalist").style.color = "white";
+    document.querySelector("#counterOne").style.color = "white";
+    let counts=setInterval(updated,600);
+
+    function updated(){
+      var karcount= document.getElementById("counterOne");
+      karcount.innerHTML=++upto;
+      // console.log(points);
+      if(upto>=points)
+      {
+          clearInterval(counts);
+          console.log("after clear interval");
+          upto=1;
+          document.querySelector("#fin2").style.color = "white";
+          document.querySelector("#counterTwo").style.color = "white";
+          let counts2=setInterval(updated2,100);
+          function updated2(){
+            var karcount= document.getElementById("counterTwo");
+            karcount.innerHTML=++upto;
+            if(upto>=totalStrikes){
+              clearInterval(counts2);
+              document.querySelector("#fin3").style.color = "white";
+              document.querySelector("#secret").style.color = "white";
+              setTimeout(function(){ 
+                document.getElementById("fin4").style.color="white";
+                document.getElementById("counterThree").innerHTML= points+totalStrikes;
+              }, 1000);
+              
+            }
+          }
+      }
+    }
   }
+  
 }
 
-if(count>= 3){
- 
-}
+  
+
+
 
