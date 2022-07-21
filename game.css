@@ -96,7 +96,7 @@ letter-spacing: 16px; */
 .logo-game{
   position: absolute;
 height: 150px;
-left: 1738px;
+right: 22px;
 top: 22px;
 }
 
@@ -526,6 +526,12 @@ top: -295px;
   font-family: "gothammedium";
   writing-mode: vertical-rl;
   /* transform: rotate(90deg); */
+}
+
+#box-stats{
+  width: 427px;
+  height: 427px;
+  /* background-color: #cc0f0f; */
 }
 
 @media only screen and (max-height: 910px) {

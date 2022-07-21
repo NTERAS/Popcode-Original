@@ -1,4 +1,5 @@
 let buttons = document.querySelectorAll("btn-style-off");
+let win=false;
 
 const langObj = '{"langArray":[' +
 '{"language":"javascript","img":"images/langs-code/js-434x434.png","text":"JavaScript est un langage de programmation de scripts principalement employé dans les pages web interactives et à ce titre est une partie essentielle des applications web. Avec les langages HTML et CSS, JavaScript est au cœur des langages utilisés par les développeurs web. Une grande majorité des sites web l’utilises, et la majorité des navigateurs web disposent d’un moteur JavaScript pour l’interpréter." },' +
@@ -159,10 +160,13 @@ function checkLang(toto){
             }
           }
 
-          if(document.getElementById("myCheck").checked == false){
-            setTimeout(function(){ document.getElementById("trouves").style.transform = "scale(1)"; }, 1000);
+          if(document.getElementById("myCheck").checked == false && win==false){
+            setTimeout(function(){ 
+              document.getElementById("trouves").style.transform = "scale(1)";
+              hideShit("yes")}, 1000);
             autoClose(true);
           }
+          console.log(win)
           
           
 
@@ -203,6 +207,7 @@ function checkLang(toto){
 
         points = points +1;
         strikePoints *= 2;
+        console.log(strikePoints+" strike");
         f = pad(points);
         document.getElementById("points").innerHTML = f;
         codeLang.splice(i,1);
@@ -216,6 +221,21 @@ function checkLang(toto){
         // console.log(typeof(pointVault));
 
         cosmos = true;
+        if(points>=4){
+          win=true;
+        }
+        if(points>=5){
+          // document.getElementById("overlay-kar").style.transform = "scale(1)";
+          document.getElementById("game-over").style.transform = "scale(1)";
+          document.getElementById("image-ftw").src = "images/win.png";
+          document.getElementById("box-stats").style.backgroundImage = "url('images/game over empty.png')"; 
+          hideShit("yes");
+          disableKeyboard();
+          startCounter();
+        }
+        
+        document.getElementById("input-field").value="";
+
         break;
         // return toto;
       }
@@ -225,12 +245,23 @@ function checkLang(toto){
       document.getElementById("wrong").classList.add("animation")
       count = countErrors(count);
       if(count>= 3){
+        hideShit("yes");
+        disableKeyboard();
         document.getElementById("game-over").style.transform = "scale(1)";
         startCounter();
-        // updated();
-  }
+        
+      }
+    }
+    if(count< 3 && win==false){
+      checkOverlays("esc");
+    }
+
 }
-checkOverlays("esc");
+
+function disableKeyboard(){
+  document.onkeydown = function (e){
+    return false;
+  }
 }
 
 function checkDoubles(kar){
@@ -284,6 +315,7 @@ function countErrors(count){
   window.localStorage.setItem("errorsKey",JSON.stringify(count));
   switch (count) {
     case 1:
+      console.log("case 1");
       document.getElementById("id-x1").style.color = "#0AEFF7";
       pointVault[2] = pointVault[1];
       pointVault[1] = 0;
@@ -310,18 +342,41 @@ function countErrors(count){
   return count;
 
 }
+// function hideShit(shit){
+//   imTired = document.querySelectorAll(".closeThis");
+
+//   for(var i=0; i< imTired.length; i++){
+//     if(shit== "yes"){
+//       imTired[i].style = "display:none";
+//     }else{
+//       imTired[i].style = "display:block";
+//     }
+    
+//   }
+// }
+
 function hideShit(shit){
   imTired = document.querySelectorAll(".closeThis");
- 
-  for(var i=0; i< imTired.length; i++){
-    if(shit== "yes"){
-      imTired[i].style = "transform:scale(0)";
-    }else{
-      imTired[i].style = "transform:scale(1)";
+  if(shit== "yes"){
+    for(var i=0; i< imTired.length; i++){
+      imTired[i].style = "display:none";
     }
-    
+  }else{
+    for(var i=0; i< imTired.length; i++){
+      imTired[i].style = "display:block";
+    }
+  }
+
+}
+
+
+function forceHide(){
+  imTired = document.querySelectorAll(".closeThis");
+  for(var i=0; i< imTired.length; i++){
+    imTired[i].style = "display:none";
   }
 }
+
 
 function pad(num) {
   let numnum = num;
@@ -334,7 +389,9 @@ function pad(num) {
 
 function autoClose(kar){
   if(kar){
-    setTimeout(function(){ document.getElementById("trouves").style.transform = "scale(0)"; }, 3000);
+    setTimeout(function(){ 
+      document.getElementById("trouves").style.transform = "scale(0)"; 
+    hideShit("no")}, 3000);
   }
 }
 
@@ -372,47 +429,61 @@ let totalStrikes = 0;
 // const sum = [1, 2, 3].reduce((partialSum, a) => partialSum + a, 0);
 
 function startCounter(){
-totalStrikes = pointVault[2]+pointVault[3]+pointVault[4];
+totalStrikes = pointVault[1]+pointVault[2]+pointVault[3]+pointVault[4];
 // totalStrikes = totalStrikes+pointVault[4];
   console.log(pointVault[2]+" [2]");
   console.log(pointVault[3]+" [3]");
   console.log(pointVault[4]+" [4]");
   console.log(totalStrikes+"total strikes");
   // console.log(totalStrikes+"total strikes");
-  if(counterPhase==1){
-    document.querySelector(".finalist").style.color = "white";
-    document.querySelector("#counterOne").style.color = "white";
-    let counts=setInterval(updated,600);
-
-    function updated(){
-      var karcount= document.getElementById("counterOne");
-      karcount.innerHTML=++upto;
-      // console.log(points);
-      if(upto>=points)
-      {
-          clearInterval(counts);
-          console.log("after clear interval");
-          upto=1;
-          document.querySelector("#fin2").style.color = "white";
-          document.querySelector("#counterTwo").style.color = "white";
-          let counts2=setInterval(updated2,100);
-          function updated2(){
-            var karcount= document.getElementById("counterTwo");
-            karcount.innerHTML=++upto;
-            if(upto>=totalStrikes){
-              clearInterval(counts2);
-              document.querySelector("#fin3").style.color = "white";
-              document.querySelector("#secret").style.color = "white";
-              setTimeout(function(){ 
-                document.getElementById("fin4").style.color="white";
-                document.getElementById("counterThree").innerHTML= points+totalStrikes;
-              }, 1000);
-              
+  if(points>=3){
+    if(counterPhase==1){
+      document.querySelector(".finalist").style.color = "white";
+      document.querySelector("#counterOne").style.color = "white";
+      let counts=setInterval(updated,150);
+  
+      function updated(){
+        var karcount= document.getElementById("counterOne");
+        karcount.innerHTML=++upto;
+        // console.log(points);
+        if(upto>=points)
+        {
+            clearInterval(counts);
+            console.log("after clear interval");
+            upto=1;
+            document.querySelector("#fin2").style.color = "white";
+            document.querySelector("#counterTwo").style.color = "white";
+            let counts2=setInterval(updated2,100);
+            function updated2(){
+              var karcount= document.getElementById("counterTwo");
+              karcount.innerHTML=++upto;
+              if(upto>=totalStrikes){
+                clearInterval(counts2);
+                document.querySelector("#fin3").style.color = "white";
+                document.querySelector("#secret").style.color = "white";
+                setTimeout(function(){ 
+                  document.getElementById("fin4").style.color="white";
+                  document.getElementById("counterThree").innerHTML= points+totalStrikes;
+                }, 1000);
+                
+              }
             }
-          }
+        }
       }
     }
+  }else{
+    document.querySelector(".finalist").style.color = "white";
+      document.querySelector("#counterOne").style.color = "white";
+      document.getElementById("counterOne").innerHTML = points;
+      document.querySelector("#fin2").style.color = "white";
+            document.querySelector("#counterTwo").style.color = "white";
+            document.querySelector("#counterTwo").innerHTML = totalStrikes;
+            document.querySelector("#fin3").style.color = "white";
+                document.querySelector("#secret").style.color = "white";
+                document.getElementById("fin4").style.color="white";
+                  document.getElementById("counterThree").innerHTML= points+totalStrikes;
   }
+  
   
 }
 
@@ -420,3 +491,13 @@ totalStrikes = pointVault[2]+pointVault[3]+pointVault[4];
 
 
 
+// document.getElementById("points").style.display = "none";
+        // document.getElementById("force-hide1").style.display = "none";
+        // document.getElementById("id-x1").remove();
+       
+        
+        // document.querySelector("score-kar").remove();
+
+        
+        // window.location.href = "index.html";
+        // updated();
