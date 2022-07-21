@@ -31,6 +31,26 @@ const langObj = '{"langArray":[' +
 '{"language":"webassembly","img":"images/langs-code/webassembly.png","text":"WebAssembly, abrégé wasm, est un standard du World Wide Web pour le développement d’applications. Il est conçu pour compléter JavaScript avec des performances supérieures. Le standard consiste en un bytecode, sa représentation textuelle et un environnement d’exécution dans un bac à sable compatible avec JavaScript. Il peut être exécuté dans un navigateur Web et en dehors. WebAssembly est standardisé dans le cadre du World Wide Web Consortium.Comme WebAssembly ne spécifie qu’un langage de bas niveau, le bytecode est généralement produit en compilant un langage de plus haut niveau. Parmi les premiers langages supportés figurent Rust avec le projet/module (crate) wasm-bindgen ainsi que le C et C++, compilés avec Emscripten (basé sur LLVM). De nombreux autres langages de programmation possèdent aujourd’hui un compilateur WebAssembly, parmi lesquels : C#, Go, Java, Lua, Python ou Ruby.Les navigateurs Web compilent le bytecode wasm dans le langage machine de l’hôte sur lequel ils sont utilisés avant de l’exécuter." }]}';
 const obj = JSON.parse(langObj);
 
+fetch('languages.json')
+  // .then(response => response.json())
+  // .then(data => console.log(data));
+
+  async function fetchThis() {
+    const response = await fetch("languages.json");
+    if (response.ok) {
+        const data = await response.json();
+        console.log(data);
+        var road = data.legals.legal
+
+        for (let i = 0; i < road.length; i++) {
+            const element = road[i].title;
+            console.log(element);
+            console.log(road[i].content);
+
+        }
+    }
+  }
+  fetchThis();
 
 
 console.log(obj.langArray);
@@ -221,23 +241,25 @@ function checkLang(toto){
         // console.log(typeof(pointVault));
 
         cosmos = true;
-        if(points>=4){
+        if(points>=26){
           win=true;
         }
-        if(points>=5){
+        if(points>=27){
           // document.getElementById("overlay-kar").style.transform = "scale(1)";
           document.getElementById("game-over").style.transform = "scale(1)";
           document.getElementById("image-ftw").src = "images/win.png";
-          document.getElementById("box-stats").style.backgroundImage = "url('images/game over empty.png')"; 
+          document.getElementById("box-stats").style.backgroundImage = "url('images/game over empty.png')";
+          document.getElementById("end-btn-1").style.display = "none";
+
           hideShit("yes");
           disableKeyboard();
           startCounter();
         }
-        
+
         document.getElementById("input-field").value="";
 
         break;
-        // return toto;
+        
       }
     }
 
@@ -248,6 +270,7 @@ function checkLang(toto){
         hideShit("yes");
         disableKeyboard();
         document.getElementById("game-over").style.transform = "scale(1)";
+        document.getElementById("end-btn-2").style.display = "none";
         startCounter();
         
       }

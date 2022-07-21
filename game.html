@@ -86,7 +86,7 @@
             <span class="finalist mt-5">langages trouves:</span><span id="counterOne">0</span>
           </div>
           <div>
-            <span id="fin2" class="finalist">chain:</span><span id="counterTwo">0</span>
+            <span id="fin2" class="finalist">points bonus:</span><span id="counterTwo">0</span>
           </div>
           <div>
             <span id="fin3" class="finalist">secret:</span><span id="secret">:(</span>
@@ -95,9 +95,10 @@
           </div>
         </div>
         
-        <a class="start-link p-3" href="game.html">RÉESSAYER</a>
+        <a id="end-btn-1" class="start-link p-3" href="game.html">RÉESSAYER</a>
+        <a id="end-btn-2" class="start-link p-3" href="index.html">REMBOBINER</a>
       </div>
-      <img class="zoom" src="images/chambe2.jpg" alt="" />
+      <img class="zoom" onscroll="karFunction()" src="images/chambe2.jpg" alt="" />
       <div>
         
         <div>
@@ -115,8 +116,15 @@
           <img class="logo-game" src="images/logo150.png" alt="" />
         </div>
         <div class="my-zoom-index closeThis">
-          <span class="minus-zoom"> - </span><span class="zoom-meter"></span
-          ><span class="plus-zoom">+</span> <span class="zoom-zoom">ZOOM</span>
+          <span class="zoom-zoom">ZOOM</span>
+          <span class="plus-zoom">+</span>
+          
+            <div class="zoom-meter">
+              <div id="zoom-progress"></div>
+            </div>
+          
+          
+          <span class="minus-zoom"> - </span>
         </div>
 
         <div id="id-results" class="results closeThis" href="#">LANGAGES TROUVés</div>

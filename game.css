@@ -105,7 +105,7 @@ top: 22px;
   width: 8px;
   height: 11px;
   left: 40px;
-  top: 937px;
+  bottom: 20px;
   /* -100px */
   
   font-family: "gothammedium";
@@ -124,8 +124,8 @@ top: 22px;
   position: absolute;
   width: 8px;
   height: 11px;
-  left: 40px;
-  top: 794px;
+  left: 39px;
+  bottom: 156px;
   
   font-family: "gothammedium";
   font-style: normal;
@@ -140,19 +140,27 @@ top: 22px;
 
 .zoom-meter{
   position: absolute;
-  border-left: 1px solid;
+  width: 1px;
   height: 124px;
 left: 42px;
-top: 813px;
-border-color: rgba(217, 217, 217, 1);
+bottom: 30px;
+background: rgba(217, 217, 217, 1);
+transform: rotate(180deg);
+/* border-color: rgba(217, 217, 217, 1); */
+}
+
+#zoom-progress {
+  height: 0%;
+  background: #0AEFF7;
+  width: 1px;
 }
 
 .zoom-zoom{
   position: absolute;
 width: 39px;
 height: 7px;
-left: 25px;
-top: 770px;
+left: 23px;
+bottom: 178px;
 
 font-family: "gothammedium";
 font-style: normal;
@@ -167,6 +175,7 @@ color: #0AEFF7;
 
 transform: rotate(-90deg);
 }
+
 
 .results{
   border: 1px solid #FFFFFF;
@@ -390,7 +399,7 @@ color: #FFFFFF;
 
 .my-zoom-index{
   position: absolute;
-  top: -5%;
+  /* top: -5%; */
 }
 
 #wrong{

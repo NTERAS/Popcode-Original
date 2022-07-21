@@ -2,7 +2,18 @@
 	Wheelzoom 4.0.1
 	license: MIT
 	http://www.jacklmoore.com/wheelzoom
-*/
+*/window.onscroll = () =>{
+	console.log("your function");
+};
+
+function karFunction() {
+  console.log("your function");
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("zoom-progress").style.width = scrolled + "%";
+}
+
 window.wheelzoom = (function(){
 	var defaults = {
 		zoom: 0.10,
@@ -73,6 +84,11 @@ window.wheelzoom = (function(){
 			var rect = img.getBoundingClientRect();
 			var offsetX = e.pageX - rect.left - window.pageXOffset;
 			var offsetY = e.pageY - rect.top - window.pageYOffset;
+
+			console.log(bgHeight+" <--bg heigth, "+height+" <-- height, ");
+			console.log((bgHeight-height)/height*33+" <--percent?,");
+			scrolled = (bgHeight-height)/height*33;
+			document.getElementById("zoom-progress").style.height = scrolled + "%";
 
 			// Record the offset between the bg edge and cursor:
 			var bgCursorX = offsetX - bgPosX;
