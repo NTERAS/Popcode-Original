@@ -312,10 +312,6 @@ color: #FFFFFF;
 }
 
 #input-field{
-  /* width: 526px; */
-  /* position: absolute; */
-  /* top:501px; */
-  /* left:697px; */
   font-size: 80px;
   line-height: 77px;
   text-align: center;
@@ -339,13 +335,6 @@ letter-spacing: 5px;
 color: #FFFFFF;
 }
 
-/* #u-win{
-  position: absolute;
-  width:100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.623);
-  transform: scale(0);
-} */
 #u-win{
   position: absolute;
   width:100vw;
@@ -413,11 +402,6 @@ color: #FFFFFF;
   color: white;
 }
 .trouv-title{
-  /* position: absolute;
-  width: 526px;
-  height: 77px;
-  left: 90px;
-  top: 247px; */
   
   font-family: "gothammedium";
   font-style: normal;
@@ -438,19 +422,12 @@ color: #FFFFFF;
   max-width: 765px;
   height: 434px;
   overflow-y: hidden;
-  /* position: absolute;
-width: 642px;
-height: 457px; */
-/* left: 567px;
-top: 368px; */
-
-font-family: "gothammedium";
-font-style: normal;
-font-weight: 500;
-font-size: 13px;
-line-height: 20px;
-
-color: #FFFFFF;
+  font-family: "gothammedium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  color: #FFFFFF;
 }
 
 .btn-style-off{
@@ -570,8 +547,8 @@ top: -281px;
 
 .over-from-gameover{
   position: relative;
-left: 46px;
-top: -295px;
+  left: 46px;
+  top: -295px;
 }
 #mediaCheck{
   position: absolute;
@@ -588,28 +565,20 @@ top: -295px;
   -webkit-appearance: none;
   background-color: transparent;
   border: 2px solid #ffaaff;
-	/* box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05); */
 	padding: 9px;
 	border-radius: 3px;
 	display: inline-block;
 	position: relative;
 }
-/* #myCheck:active, .myCheck:checked:active {
-	box-shadow: 0 1px 2px rgb(241, 6, 6), inset 0px 1px 3px rgb(41, 190, 11);
-} */
 
 #myCheck:checked {
 	background-color: transparent;
-	/* border: 2px solid #3f053f; */
-	/* box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1); */
 	color: #cc0f0f;
 }
 
 #myCheck:checked:after {
-	/* content: '\2714'; */
   content: "";
   background-color: #ffaaff;
-	/* font-size: 14px; */
 	position: absolute;
   width: 10px;
   height: 10px;
@@ -625,13 +594,11 @@ top: -295px;
 #secret{
   font-family: "gothammedium";
   writing-mode: vertical-rl;
-  /* transform: rotate(90deg); */
 }
 
 #box-stats{
   width: 427px;
   height: 427px;
-  /* background-color: #cc0f0f; */
 }
 
 @media only screen and (max-height: 910px) {
