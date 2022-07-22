@@ -177,6 +177,8 @@ transform: rotate(-90deg);
 }
 
 
+
+
 .results{
   border: 1px solid #FFFFFF;
   position: absolute;
@@ -205,6 +207,95 @@ color: #FFFFFF;
   content: url("images/icon-search-9x9.png");
   width: 5px;
   height: 5px;
+}
+
+.img-tuto-container{
+  width: 50px;
+  /* height: auto; */
+}
+
+#overlay-tutorial{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width:60vw;
+  left:20%;
+  height: 80vh;
+  top: 10%;
+  background-color: rgba(0, 0, 0, 0.623);
+  border-radius: 10%;
+  border: 2px solid white;
+  /* transform: scale(0); */
+  color: white;
+}
+.small-p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 20px;
+  padding-left: 10px;
+  font-style: normal;
+  font-size: 30px;
+}
+
+#mention-legales{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width:100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.623);
+  transform: scale(0);
+  color: white;
+}
+#men-leg-p{
+  /* text-align: end; */
+  overflow-y:scroll;
+  font-style: normal;
+}
+
+#men-leg-ok{
+  padding: 10px;
+  font-family: "gothammedium";
+  font-style: normal;
+  border-radius: 10%;
+  border: 1px solid white;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.jcl-mj{
+  padding: 10px;
+  font-family: "gothammedium";
+  font-style: normal;
+  border: 1px solid white;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.jcl-mj:hover{
+  border-color:rgb(199, 88, 140) ;
+  color: rgb(22, 170, 207);
+}
+
+
+#men-leg-ok:hover{
+  border-color:rgb(199, 88, 140) ;
+  color: rgb(22, 170, 207);
+}
+#m-l{
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
+#m-l:hover{
+  text-decoration: none;
+  color:#0AEFF7;
+  border-bottom: 1px solid rgb(199, 88, 140);
 }
 
 #overlay-kar{

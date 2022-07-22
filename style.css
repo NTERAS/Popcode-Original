@@ -398,6 +398,48 @@ body {
   background-image: url("images/wall-cover2.png");
 }
 
+#mention-legales{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width:100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.623);
+  transform: scale(0);
+  color: white;
+}
+#men-leg-p{
+  /* text-align: end; */
+  overflow-y:scroll;
+  font-style: normal;
+}
+
+#men-leg-ok{
+  padding: 10px;
+  font-family: "gothammedium";
+  font-style: normal;
+  border-radius: 10%;
+  border: 1px solid white;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+#men-leg-ok:hover{
+  border-color:rgb(199, 88, 140) ;
+  color: rgb(22, 170, 207);
+}
+#m-l{
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
+#m-l:hover{
+  text-decoration: none;
+  color:#0AEFF7;
+  border-bottom: 1px solid rgb(199, 88, 140);
+}
+
 .circle1 {
   position: absolute;
   left: 33.44%;

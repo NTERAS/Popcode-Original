@@ -23,6 +23,30 @@
   <body>
     <!-- <img class="game-image" src="images/Jeu-figma.jpg" alt=""> -->
     <div class="jail">
+      <div id="overlay-tutorial">
+        <div class="d-flex p-3">
+          <img src="images/keyboard.png" alt="keyboard">
+          <p class="small-p">Utiliser le clavier pour écrire directement</p>
+        </div>
+        <div class="d-flex p-3">
+          <img class="img-tuto-container" src="images/esc-button.png" alt="escape">
+          <p class="small-p">Appuyez sur esc pour fermer n'importe quelle superposition</p>
+        </div>
+        <div class="d-flex p-3">
+          <img src="images/enter-button.png" alt="entree">
+          <p class="small-p">Appuyez sur entrée pour valider votre réponse</p>
+        </div>
+        <div class="d-flex p-3">
+          <img src="images/wheel-button.png" alt="wheel zoom">
+          <p class="small-p">Utilisez la molette de votre souris pour zoomer et trouver des indices.</p>
+        </div>
+        <div class="jcl-mj">je comprends, laisse-moi jouer</div>
+      </div>
+      <div id="mention-legales" class="d-flex align-items-center justify-content-center vh-100 vw-100">
+        <h2 id="men-leg-title"></h2>
+        <p id="men-leg-p"></p>
+        <a id="men-leg-ok">ok</a>
+      </div>
       <div id="wrong" class="d-flex align-items-center justify-content-center vh-100 vw-100">x</div>
       <div id="overlay-kar">
         <input id="input-field" type="text" onblur="this.focus()" autofocus />

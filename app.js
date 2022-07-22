@@ -109,3 +109,37 @@ document.querySelector("#continue-save").addEventListener("click",()=>{
   document.getElementById("points").innerHTML=arrayKey.length;
   console.log(points)
 })
+
+async function fetchThis() {
+  const response = await fetch("languages.json");
+  if (response.ok) {
+      const data = await response.json();
+      console.log(data); // give the tree structure
+      var road = data.legals.legal
+
+      for (let i = 0; i < road.length; i++) {
+          // const element = road[i].title;
+          document.getElementById("men-leg-title").innerHTML = road[i].title;
+          document.getElementById("men-leg-p").innerHTML = road[i].content;
+          // console.log(element);
+          console.log(road[i].content);
+
+      }
+  }
+}
+document.getElementById("m-l").addEventListener("click", ()=>{
+document.getElementById("mention-legales").style.transform = "scale(1)";
+fetchThis();
+// hideShit("yes");
+})
+document.getElementById("men-leg-ok").addEventListener("click", ()=>{
+document.getElementById("mention-legales").style.transform = "scale(0)";
+// fetchThis();
+hideShit("no");
+})
+
+document.getElementById("m-l2").addEventListener("click", ()=>{
+  document.getElementById("mention-legales").style.transform = "scale(1)";
+  fetchThis();
+  // hideShit("yes");
+  })

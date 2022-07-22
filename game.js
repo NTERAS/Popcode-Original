@@ -1,5 +1,8 @@
 let buttons = document.querySelectorAll("btn-style-off");
 let win=false;
+hideShit("yes");
+let tutorial=true;
+disableKeyboard();
 
 const langObj = '{"langArray":[' +
 '{"language":"javascript","img":"images/langs-code/js-434x434.png","text":"JavaScript est un langage de programmation de scripts principalement employé dans les pages web interactives et à ce titre est une partie essentielle des applications web. Avec les langages HTML et CSS, JavaScript est au cœur des langages utilisés par les développeurs web. Une grande majorité des sites web l’utilises, et la majorité des navigateurs web disposent d’un moteur JavaScript pour l’interpréter." },' +
@@ -31,6 +34,8 @@ const langObj = '{"langArray":[' +
 '{"language":"webassembly","img":"images/langs-code/webassembly.png","text":"WebAssembly, abrégé wasm, est un standard du World Wide Web pour le développement d’applications. Il est conçu pour compléter JavaScript avec des performances supérieures. Le standard consiste en un bytecode, sa représentation textuelle et un environnement d’exécution dans un bac à sable compatible avec JavaScript. Il peut être exécuté dans un navigateur Web et en dehors. WebAssembly est standardisé dans le cadre du World Wide Web Consortium.Comme WebAssembly ne spécifie qu’un langage de bas niveau, le bytecode est généralement produit en compilant un langage de plus haut niveau. Parmi les premiers langages supportés figurent Rust avec le projet/module (crate) wasm-bindgen ainsi que le C et C++, compilés avec Emscripten (basé sur LLVM). De nombreux autres langages de programmation possèdent aujourd’hui un compilateur WebAssembly, parmi lesquels : C#, Go, Java, Lua, Python ou Ruby.Les navigateurs Web compilent le bytecode wasm dans le langage machine de l’hôte sur lequel ils sont utilisés avant de l’exécuter." }]}';
 const obj = JSON.parse(langObj);
 
+
+
 fetch('languages.json')
   // .then(response => response.json())
   // .then(data => console.log(data));
@@ -39,67 +44,113 @@ fetch('languages.json')
     const response = await fetch("languages.json");
     if (response.ok) {
         const data = await response.json();
-        console.log(data);
+        console.log(data); // give the tree structure
         var road = data.legals.legal
 
         for (let i = 0; i < road.length; i++) {
-            const element = road[i].title;
-            console.log(element);
+            // const element = road[i].title;
+            document.getElementById("men-leg-title").innerHTML = road[i].title;
+            document.getElementById("men-leg-p").innerHTML = road[i].content;
+            // console.log(element);
             console.log(road[i].content);
 
         }
     }
   }
+document.getElementById("m-l").addEventListener("click", ()=>{
+  document.getElementById("mention-legales").style.transform = "scale(1)";
   fetchThis();
+  hideShit("yes");
+})
+document.getElementById("men-leg-ok").addEventListener("click", ()=>{
+  document.getElementById("mention-legales").style.transform = "scale(0)";
+  // fetchThis();
+  hideShit("no");
+})
+  
+// document.onkeyup = function (evt){
+//   if(tutorial==true){
+//     // document.getElementById("input-field").onfocus= ()=>{
 
+//     // };
+//     document.getElementById("overlay-kar").style.transform = "scale(0)";
+//   }
+// }
 
 console.log(obj.langArray);
-document.onkeydown = function(evt) {
-  document.getElementById("u-win").classList.remove("anim");
-  document.getElementById("wrong").classList.remove("animation");
-  document.getElementById("dj-trou").classList.remove("anim");
-  document.getElementById("trouves").style.transform = "scale(0)";
+// if(tutorial==false){
+  document.onkeydown = function karlove(evt) {
+    // if(tutorial==true){
+    //   disableKeyboard();
+    //   checkOverlays("tuto");
+    //   return false;
+    //   document.getElementById("input-field").innerHTML = "";
+    //   disableKeyboard();
+      
+    //   console.log("after input field");
+    // }
+    // if(tutorial==false){
+    //   return true;
+    // }
+    document.getElementById("u-win").classList.remove("anim");
+    document.getElementById("wrong").classList.remove("animation");
+    document.getElementById("dj-trou").classList.remove("anim");
+    document.getElementById("trouves").style.transform = "scale(0)";
+    
+      evt = evt || window.event;
+    var charCode = evt.key || evt.which;
+    
+    
   
-  evt = evt || window.event;
-  var charCode = evt.key || evt.which;
-
-// console.log(buttons);
-
- breakit: if(charCode === "Enter" && document.getElementById("input-field").value != ""){
-    // console.log("inside correct enter")
-    myText = document.getElementById("input-field").value;
-    myText = myText.toLowerCase();
-    // console.log(myText);
-    if(myText=="karolos"){
-      console.log("secret found");
-      document.getElementById("secret").innerHTML = ":)"
-      checkOverlays("esc");
-      document.getElementById("input-field").value="";
-      break breakit;
+  // console.log(buttons);
+  
+   breakit: if(charCode === "Enter" && document.getElementById("input-field").value != "" &&tutorial == false){
+      // console.log("inside correct enter")
+      myText = document.getElementById("input-field").value;
+      myText = myText.toLowerCase();
+      // console.log(myText);
+      if(myText=="karolos"){
+        console.log("secret found");
+        document.getElementById("secret").innerHTML = ":)"
+        checkOverlays("esc");
+        document.getElementById("input-field").value="";
+        break breakit;
+      }
+    
+      fixErrors(myText);
+  
+      myText = document.getElementById("input-field").value;
+    
+      x = checkDoubles(myText);
+  
+      if(x==false){
+        // console.log("x == false")
+        checkLang(myText);
+      }else{
+        document.getElementById("dj-trou").classList.add("anim");
+        checkOverlays("esc");
+      }
     }
   
-    fixErrors(myText);
-
-    myText = document.getElementById("input-field").value;
-  
-    x = checkDoubles(myText);
-
-    if(x==false){
-      // console.log("x == false")
-      checkLang(myText);
-    }else{
-      document.getElementById("dj-trou").classList.add("anim");
-      checkOverlays("esc");
+    if(charCode === "Escape" && tutorial ==false) {
+      
+        checkOverlays("esc");
+        console.log("im here");
+      
+      
     }
+    if(charCode !== "Escape" && charCode !== "Enter" &&tutorial==false){
+    checkOverlays("guess");
   }
-
-  if(charCode === "Escape") {
-    checkOverlays("esc");
-  }
-  if(charCode !== "Escape" && charCode !== "Enter"){
-  checkOverlays("guess");
-}
-};
+  };
+// }
+document.querySelector(".jcl-mj").addEventListener("click", ()=>{
+  tutorial = false;
+  document.getElementById("overlay-tutorial").style.transform = "scale(0)";
+  checkOverlays("esc");
+  console.log(tutorial)
+  // karlove();
+})
 
 let codeLang = ["javascript", "html","css","sql","python","java","bash","powershell","c#","php","c++","typescript","c","ruby","go","assembly","swift","kotlin","r","vba","objective-c","scala","rust","dart","elixir","clojure","webassembly"] //28
 let codeLangCorrect = [];
@@ -327,9 +378,17 @@ function checkOverlays(kar){
     document.getElementById("overlay-kar").style.transform = "scale(0)";
     document.getElementById("u-win").style.transform = "scale(0)";
     document.getElementById("trouves").style.transform = "scale(0)";
+    document.getElementById("mention-legales").style.transform = "scale(0)";
     document.getElementById("input-field").value ="";
-    hideShit("no");
-    // console.log("checkoverlays == esc");
+    hideShit("no");// console.log("checkoverlays == esc");
+  }
+  if(kar == "tuto"){
+    document.getElementById("overlay-kar").style.transform = "scale(0)";
+    // document.getElementById("u-win").style.transform = "scale(0)";
+    // document.getElementById("trouves").style.transform = "scale(0)";
+    // document.getElementById("mention-legales").style.transform = "scale(0)";
+    document.getElementById("input-field").value ="";
+    console.log("tuto");
   }
 }
 
